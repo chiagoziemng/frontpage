@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useEffect, useId, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRef } from "react";
@@ -13,17 +14,16 @@ export const Cover = ({
   className?: string;
 }) => {
   const [hovered, setHovered] = useState(false);
-
   const ref = useRef<HTMLDivElement>(null);
-
   const [containerWidth, setContainerWidth] = useState(0);
   const [beamPositions, setBeamPositions] = useState<number[]>([]);
 
   useEffect(() => {
     if (ref.current) {
-      setContainerWidth(ref.current?.clientWidth ?? 0);
+      const currentRef = ref.current; // Capture ref.current in a stable variable
+      setContainerWidth(currentRef.clientWidth ?? 0);
 
-      const height = ref.current?.clientHeight ?? 0;
+      const height = currentRef.clientHeight ?? 0;
       const numberOfBeams = Math.floor(height / 10); // Adjust the divisor to control the spacing
       const positions = Array.from(
         { length: numberOfBeams },
@@ -31,14 +31,14 @@ export const Cover = ({
       );
       setBeamPositions(positions);
     }
-  }, [ref.current]);
+  }, []); // Remove ref.current from dependency array
 
   return (
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       ref={ref}
-      className="relative hover:bg-neutral-900  group/cover inline-block dark:bg-neutral-900 bg-neutral-100 px-2 py-2  transition duration-200 rounded-sm"
+      className="relative hover:bg-neutral-900 group/cover inline-block dark:bg-neutral-900 bg-neutral-100 px-2 py-2 transition duration-200 rounded-sm"
     >
       <AnimatePresence>
         {hovered && (
@@ -91,7 +91,7 @@ export const Cover = ({
           key={index}
           hovered={hovered}
           duration={Math.random() * 2 + 1}
-          delay={Math.random() * 2 + 1}
+          delay={Math.random() * 2 + 1} // Ensure delay is used
           width={containerWidth}
           style={{
             top: `${position}px`,
@@ -147,7 +147,7 @@ export const Cover = ({
 
 export const Beam = ({
   className,
-  delay,
+  delay, // Ensure delay is used
   duration,
   hovered,
   width = 600,
@@ -175,7 +175,6 @@ export const Beam = ({
         d={`M0 0.5H${width ?? "600"}`}
         stroke={`url(#svgGradient-${id})`}
       />
-
       <defs>
         <motion.linearGradient
           id={`svgGradient-${id}`}
@@ -197,8 +196,8 @@ export const Beam = ({
             duration: hovered ? 0.5 : duration ?? 2,
             ease: "linear",
             repeat: Infinity,
-            delay: hovered ? Math.random() * (1 - 0.2) + 0.2 : 0,
-            repeatDelay: hovered ? Math.random() * (2 - 1) + 1 : delay ?? 1,
+            delay: hovered ? Math.random() * (1 - 0.2) + 0.2 : delay ?? 1, // Use delay here
+            repeatDelay: hovered ? Math.random() * (2 - 1) + 1 : delay ?? 1, // Use delay here
           }}
         >
           <stop stopColor="#2EB9DF" stopOpacity="0" />
@@ -219,8 +218,9 @@ export const CircleIcon = ({
 }) => {
   return (
     <div
+      style={{ animationDelay: `${delay}s` }} // Use delay prop
       className={cn(
-        `pointer-events-none animate-pulse group-hover/cover:hidden group-hover/cover:opacity-100 group h-2 w-2 rounded-full bg-neutral-600 dark:bg-white opacity-20 group-hover/cover:bg-white`,
+        "pointer-events-none animate-pulse group-hover/cover:hidden group-hover/cover:opacity-100 group h-2 w-2 rounded-full bg-neutral-600 dark:bg-white opacity-20 group-hover/cover:bg-white",
         className
       )}
     ></div>
