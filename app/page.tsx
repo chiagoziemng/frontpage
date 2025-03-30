@@ -86,7 +86,7 @@ export default function Home() {
           <div className="absolute right-1/2 translate-x-1/2 transform">
           <div className="hidden md:flex gap-x-10 items-center text-gray-700 font-medium text-lg cursor-pointer">
             <Link href={"/showcase"} className="hover:text-blue-500">
-              Showcase
+              Case Study
             </Link>
 
             <ScrollLink
@@ -97,13 +97,13 @@ export default function Home() {
               Services
             </ScrollLink>
 
-            <ScrollLink
+            {/* <ScrollLink
               to="process"
               smooth={true}
               className="hover:text-blue-500"
             >
               Process
-            </ScrollLink>
+            </ScrollLink> */}
 
             <ScrollLink
               to="guarentees"
@@ -116,9 +116,9 @@ export default function Home() {
         </div>
 
         <div className="flex items-center gap-x-4">
-          <a href="tel:519400200" className="hidden lg:flex">
+          <a href="tel:07053119540" className="hidden lg:flex">
             <button className="px-4 py-2 rounded-md flex items-center gap-x-3">
-              (519)-400-200
+            (+234) 705 311 9540
             </button>
           </a>
 
@@ -402,22 +402,7 @@ export default function Home() {
       </section>
 
       <footer className="bg-[#fafafa] py-10  px-6 md:px-0 md:mx-auto border-t">
-        {/* <div className="flex flex-col  justify-between gap-y-3 xl:w-4/5 2xl:w-[68%] mx-auto">
-          <h1 className="text-3xl md:text-5xl font-medium ">
-            <Image
-              src={"/logo/logo.webp"}
-              width={10000}
-              height={10000}
-              className="w-40"
-              alt="image"
-            />{" "}
-          </h1>
-          <p className="text-left  text-xl  text-gray-500">519-200-5000</p>
-          <p className="text-left  text-xl  text-gray-500">
-            admin@birdsoftware.ca
-          </p>
-        </div> */}
-
+       
         <div className="flex md:justify-center gap-x-4 mt-10">
           © 2025 OMAR AND BLASIUS LIMITED - All Rights Reserved.
           <Link href="/" className="text-blue-500">
