@@ -1,9 +1,8 @@
-"use client";
 
-import BoxReveal from "@/components/magicui/box-reveal";
+import { BoxReveal } from "@/components/magicui/box-reveal";
 import Link from "next/link";
 
-const BoxRevealDemo = () => {
+export function BoxRevealDemo() {
   return (
     <div className="h-full w-full items-center justify-center ml-10 overflow-hidden pt-8 space-y-2">
       <BoxReveal boxColor={"#3b82f6"} duration={0.5}>
@@ -40,5 +39,3 @@ const BoxRevealDemo = () => {
     </div>
   );
 }
-
-export default BoxRevealDemo;
