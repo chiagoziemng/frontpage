@@ -1,6 +1,26 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.scroller {
+  --animation-direction: forwards;
+  --animation-duration: 100s;
+}
+
+.animate-scroll {
+  animation: scroll var(--animation-duration) linear infinite;
+  animation-direction: var(--animation-direction);
+}
+
 @custom-variant dark (&:is(.dark *));
 
 :root {

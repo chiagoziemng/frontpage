@@ -52,10 +52,22 @@ export function AnimatedBeamMultipleOutputDemo({
       <div className="flex size-full max-w-lg flex-row items-stretch justify-between gap-10">
         <div className="flex flex-col justify-center gap-2">
           <Circle ref={div1Ref}>
-            <Icons.googleDrive />
+          <Image
+              src={"/logo/Next.png"}
+              width={10000}
+              height={10000}
+              className="w-6 h-6"
+              alt="image"
+            />
           </Circle>
           <Circle ref={div2Ref}>
-            <Icons.googleDocs />
+          <Image
+              src={"/logo/Three.png"}
+              width={10000}
+              height={10000}
+              className="w-6 h-6"
+              alt="image"
+            />
           </Circle>
           <Circle ref={div3Ref}>
           <Image
@@ -67,11 +79,26 @@ export function AnimatedBeamMultipleOutputDemo({
             />
           </Circle>
           <Circle ref={div4Ref}>
-            <Icons.messenger />
+          <Image
+              src={"/logo/Node.js.png"}
+              width={10000}
+              height={10000}
+              className="w-6 h-6"
+              alt="image"
+            />
           </Circle>
           <Circle ref={div5Ref}>
             <Icons.notion />
           </Circle>
+          {/* <Circle ref={div6Ref}>
+          <Image
+              src={"/logo/React.png"}
+              width={10000}
+              height={10000}
+              className="w-6 h-6"
+              alt="image"
+            />
+          </Circle> */}
         </div>
         <div className="flex flex-col justify-center">
         <Circle ref={div6Ref} className="size-16 bg-white">

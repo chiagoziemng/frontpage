@@ -5,27 +5,27 @@ import Link from "next/link";
 const works = [
   {
     background: "bg-gray-200",
-    imageUrl: "/images/business.webp",
-    title: "Rubbish Brothers",
-    link: "https://www.rubbishbrothers.com",
+    imageUrl: "/logo/logo.webp",
+    title: "Pameec Luxury Suite",
+    link: "https://www.omarandblasius.com.ng/",
   },
   {
     background: "bg-gray-200",
-    imageUrl: "/images/business.webp",
-    title: "Atlas Massage",
-    link: "https://www.atlasmassage.ca",
+    imageUrl: "/logo/logo.webp",
+    title: "Power Mike Hotel",
+    link: "https://www.omarandblasius.com.ng/",
   },
   {
     background: "bg-gray-200",
-    imageUrl: "/images/business.webp",
-    title: "Canadian Security Solutions",
-    link: "https://www.canadiansecuritysolutions.com",
+    imageUrl: "/logo/logo.webp",
+    title: "Vibrant Academy",
+    link: "https://www.omarandblasius.com.ng/",
   },
   {
     background: "bg-gray-200",
-    imageUrl: "/images/business.webp",
-    title: "Flight 9",
-    link: "https://www.flight9.art",
+    imageUrl: "/logo/logo.webp",
+    title: "AsogWorld Travel and Tours",
+    link: "https://www.omarandblasius.com.ng/",
   },
 
 

@@ -268,10 +268,10 @@ export default function Home() {
                     logo: "/logo/logo.webp",
                     name: "Logo",
                   },
-                  {
-                    logo: "/logo/figma.png",
-                    name: "Logo",
-                  },
+                  // {
+                  //   logo: "/logo/figma.png",
+                  //   name: "Logo",
+                  // },
                   
                 ]}
               />
@@ -336,9 +336,9 @@ export default function Home() {
                 className="w-6 mb-8"
                 alt="image"
               />
-            </span>{" "} {" "}  
-
-            
+              {" "}
+            </span>
+            {" "} 
             Process
           </h1>
 
@@ -373,10 +373,16 @@ export default function Home() {
           />
           <div className="flex flex-col gap-y-5 md:w-1/2">
             <h1 className="text-lg md:text-2xl ">
-              &quot;We&apos;ve been working with Bird for over 2 years and
+              &quot;
+              {/* We&apos;ve been working with Bird for over 2 years and
               they&apos;ve been amazing to work with. They&apos;ve helped us
               grow our business and we couldn&apos;t be happier with the
-              results. &quot;
+              results.  */}
+              Expect a quick possible solutions to all your tech and software issues. 
+              They have the best web developers, professional software engineers 
+              and experienced sales agents. 
+              I commend their professionalism, competency and expertise.
+              &quot;
             </h1>
             <div className="flex items-center gap-x-1">
               <IconStarFilled className="text-4xl text-yellow-500" />
@@ -387,8 +393,8 @@ export default function Home() {
             </div>
 
             <span className="text-xl font-medium">
-              Jordan, Brisson <br />
-              CEO, Atlas Massage
+            Chinenyenwa, Obuna <br />
+              CEO, Asogworld Travels &Tours Ltd
             </span>
           </div>
         </main>
@@ -406,6 +412,12 @@ export default function Home() {
        
         <div className="flex md:justify-center gap-x-4 mt-10">
           © 2025 OMAR AND BLASIUS LIMITED - All Rights Reserved.
+          
+           <a href="tel:07053119540" className="hidden lg:flex">
+            
+            (+234) 705 311 9540
+           
+          </a>
           <Link href="/" className="text-blue-500">
             Privacy Policy
           </Link>
