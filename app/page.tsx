@@ -336,7 +336,9 @@ export default function Home() {
                 className="w-6 mb-8"
                 alt="image"
               />
-            </span>{" "}
+            </span>{" "} {" "}  
+
+            
             Process
           </h1>
 
