@@ -7,17 +7,11 @@ import { ElementType } from "react";
 import React from "react";
 
 interface FlipTextProps extends MotionProps {
-  /** The duration of the animation */
   duration?: number;
-  /** The delay between each character */
   delayMultiple?: number;
-  /** The class name of the component */
   className?: string;
-  /** The element type of the component */
   as?: ElementType;
-  /** The children of the component */
   children: React.ReactNode;
-  /** The variants of the animation */
   variants?: Variants;
 }
 
@@ -36,29 +30,32 @@ export function FlipText({
   ...props
 }: FlipTextProps) {
   const MotionComponent = motion.create(Component);
-  const characters = React.Children.toArray(children).join("").split("");
+  const text = React.Children.toArray(children).join("");
+  const characters = text.split("");
 
-  // Use the useInView hook to detect when the component is in view
   const { ref, inView } = useInView({
-    triggerOnce: true, // Only trigger the animation once
-    threshold: 0.1,    // Trigger when 10% of the component is visible
+    triggerOnce: true,
+    threshold: 0.1,
   });
 
   return (
-    <div ref={ref} className="flex justify-center space-x-2">
+    <div
+      ref={ref}
+      className="flex justify-center flex-wrap gap-x-1 sm:gap-x-2 max-w-full"
+    >
       <AnimatePresence mode="wait">
         {characters.map((char, i) => (
           <MotionComponent
             key={i}
             initial="hidden"
-            animate={inView ? "visible" : "hidden"} // Only animate to "visible" when in view
+            animate={inView ? "visible" : "hidden"}
             exit="hidden"
             variants={variants || defaultVariants}
             transition={{ duration, delay: i * delayMultiple }}
-            className={cn("origin-center drop-shadow-sm", className)}
+            className={cn("origin-center drop-shadow-sm inline-block", className)}
             {...props}
           >
-            {char}
+            {char === " " ? "\u00A0" : char} {/* Preserve spaces */}
           </MotionComponent>
         ))}
       </AnimatePresence>
