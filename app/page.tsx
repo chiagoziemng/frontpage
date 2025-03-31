@@ -97,13 +97,13 @@ export default function Home() {
               Services
             </ScrollLink>
 
-            {/* <ScrollLink
+            <ScrollLink
               to="process"
               smooth={true}
               className="hover:text-blue-500"
             >
               Process
-            </ScrollLink> */}
+            </ScrollLink>
 
             <ScrollLink
               to="guarentees"
@@ -116,11 +116,11 @@ export default function Home() {
         </div>
 
         <div className="flex items-center gap-x-4">
-          <a href="tel:07053119540" className="hidden lg:flex">
+          {/* <a href="tel:07053119540" className="hidden lg:flex">
             <button className="px-4 py-2 rounded-md flex items-center gap-x-3">
             (+234) 705 311 9540
             </button>
-          </a>
+          </a> */}
 
           <Link
             href={"/meeting"}
@@ -156,8 +156,7 @@ export default function Home() {
             className="md:text-center
            text-xl md:text-2xl my-6 md:my-10 md:w-4/5 mx-auto text-gray-500"
           >
-            Schedule a call with us to discuss your project and get a quote in
-            minutes
+            ⏳ Book a strategy call - Get a tailored solution in minutes.
           </p>
 
           <div
@@ -185,7 +184,7 @@ export default function Home() {
        duration-200 
        hover:shadow-[1px_1px_rgba(0,0,0),2px_2px_rgba(0,0,0),3px_3px_rgba(0,0,0),4px_4px_rgba(0,0,0),5px_5px_0px_0px_rgba(0,0,0)] dark:shadow-[1px_1px_rgba(255,255,255),2px_2px_rgba(255,255,255),3px_3px_rgba(255,255,255),4px_4px_rgba(255,255,255),5px_5px_0px_0px_rgba(255,255,255)] "
             >
-              Book a Call
+              [⚡ Book a Call ]
             </Link>
             <Link
               href={"/showcase"}
@@ -200,7 +199,7 @@ export default function Home() {
         rounded-[6px]
         hover:shadow-[1px_1px_rgba(0,0,0),2px_2px_rgba(0,0,0),3px_3px_rgba(0,0,0),4px_4px_rgba(0,0,0),5px_5px_0px_0px_rgba(0,0,0)] dark:shadow-[1px_1px_rgba(255,255,255),2px_2px_rgba(255,255,255),3px_3px_rgba(255,255,255),4px_4px_rgba(255,255,255),5px_5px_0px_0px_rgba(255,255,255)]"
             >
-              Showcase
+              Case Study
             </Link>
           </div>
 
