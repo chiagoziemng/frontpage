@@ -207,7 +207,7 @@ export default function Home() {
             <BoxReveal boxColor={"#3b82f6"} duration={0.5}>
               <p className="md:text-xl font-semibold flex gap-x-2 md:gap-x-4 items-center">
                 <PiCheckBold className="text-xl text-blue-500" />
-                Design
+                Web Design
               </p>
             </BoxReveal>
             <BoxReveal boxColor={"#3b82f6"} duration={0.5}>
