@@ -239,7 +239,7 @@ export default function Home() {
               <div className="flex my-6 gap-x-5 w-full">
                 <div>
                   <h1 className="text-blue-500 text-3xl md:text-5xl">
-                    <NumberTicker value={1000} /> +
+                    <NumberTicker value={56} /> +
                     <p className="text-gray-500 text-sm md:text-md">
                       Happy Clients
                     </p>

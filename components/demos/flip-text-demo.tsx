@@ -9,5 +9,6 @@ export function FlipTextDemo() {
         Built from the ground up
       </FlipText>
   </div>
+  
   );
 }
